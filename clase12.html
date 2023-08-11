@@ -32,6 +32,8 @@
       .product-detail {
         width: 360px;
         padding-bottom: 24px;
+        position: absolute;
+        right: 0;
       }
 
       .product-detail-close {
@@ -48,6 +50,38 @@
 
       .product-detail-close:hover {
         cursor: pointer;
+      }
+
+      .product-detail > img:nth-child(2) {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .product-info {
+        margin: 24px 24px 0px 24px;
+      }
+
+      .product-info p:nth-child(1) {
+        font-weight: bold;
+        font-size: var(--md);
+        margin-top: 0px;
+        margin-bottom: 4px;
+      }
+
+      .product-info p:nth-child(2) {
+        color: var(--very-light-pink);
+        font-size: var(--md);
+        margin-top: 0px;
+        margin-bottom: 36px;
+      }
+
+      .product-info p:nth-child(3) {
+        color: var(--very-light-pink);
+        font-size: var(--sm);
+        margin-top: 0px;
+        margin-bottom: 36px;
       }
 
       .primary-button {
@@ -67,6 +101,12 @@
         align-items: center;
         justify-content: center;
       }
+
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
+        }
+      }
     </style>
   </head>
 
@@ -80,11 +120,13 @@
         alt="bike"
       />
       <div class="product-info">
+        <div class="product-points">...</div>
         <p>$35.00</p>
         <p>Bike</p>
         <p>
-          With its practical position, this bike also fulfills a decorative
-          function, add your hall or workspace.
+          With its functional and practical design, this bike also fulfills a
+          decorative function, adding personality and a retro-vintage aesthetic
+          to your house.
         </p>
         <button class="primary-button add-to-car-button">
           <img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
